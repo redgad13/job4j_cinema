@@ -30,8 +30,12 @@ public class File {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         File file = (File) o;
         return id == file.id;
     }
@@ -43,10 +47,10 @@ public class File {
 
     @Override
     public String toString() {
-        return "File{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", path='" + path + '\'' +
-                '}';
+        return "File{"
+                + "id=" + id
+                + ", name='" + name + '\''
+                + ", path='" + path + '\''
+                + '}';
     }
 }

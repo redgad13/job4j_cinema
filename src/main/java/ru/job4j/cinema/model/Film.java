@@ -78,8 +78,12 @@ public class Film {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Film film = (Film) o;
         return id == film.id;
     }
@@ -91,15 +95,15 @@ public class Film {
 
     @Override
     public String toString() {
-        return "Film{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", year=" + year +
-                ", genreId=" + genreId +
-                ", minimalAge=" + minimalAge +
-                ", durationInMin=" + durationInMin +
-                ", fileId=" + fileId +
-                '}';
+        return "Film{"
+                + "id=" + id
+                + ", name='" + name + '\''
+                + ", description='" + description + '\''
+                + ", year=" + year
+                + ", genreId=" + genreId
+                + ", minimalAge=" + minimalAge
+                + ", durationInMin=" + durationInMin
+                + ", fileId=" + fileId
+                + '}';
     }
 }

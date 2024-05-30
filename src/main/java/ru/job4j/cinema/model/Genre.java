@@ -25,8 +25,12 @@ public class Genre {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Genre genre = (Genre) o;
         return id == genre.id;
     }
@@ -38,9 +42,9 @@ public class Genre {
 
     @Override
     public String toString() {
-        return "Genre{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
+        return "Genre{"
+                + "id=" + id
+                + ", name='" + name + '\''
+                + '}';
     }
 }

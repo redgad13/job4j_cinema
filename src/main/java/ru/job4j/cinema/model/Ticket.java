@@ -39,8 +39,12 @@ public class Ticket {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Ticket ticket = (Ticket) o;
         return id == ticket.id;
     }
@@ -52,12 +56,12 @@ public class Ticket {
 
     @Override
     public String toString() {
-        return "Ticket{" +
-                "id=" + id +
-                ", sessionId=" + sessionId +
-                ", rowNumber=" + rowNumber +
-                ", placeNumber=" + placeNumber +
-                ", userId=" + userId +
-                '}';
+        return "Ticket{"
+                + "id=" + id
+                + ", sessionId=" + sessionId
+                + ", rowNumber=" + rowNumber
+                + ", placeNumber=" + placeNumber
+                + ", userId=" + userId
+                + '}';
     }
 }

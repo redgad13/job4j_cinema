@@ -61,8 +61,12 @@ public class FilmSession {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         FilmSession that = (FilmSession) o;
         return id == that.id;
     }
@@ -74,13 +78,13 @@ public class FilmSession {
 
     @Override
     public String toString() {
-        return "FilmSession{" +
-                "id=" + id +
-                ", filmId=" + filmId +
-                ", hallId=" + hallId +
-                ", startTime=" + startTime +
-                ", endTime=" + endTime +
-                ", price=" + price +
-                '}';
+        return "FilmSession{"
+                + "id=" + id
+                + ", filmId=" + filmId
+                + ", hallId=" + hallId
+                + ", startTime=" + startTime
+                + ", endTime=" + endTime
+                + ", price=" + price
+                + '}';
     }
 }
