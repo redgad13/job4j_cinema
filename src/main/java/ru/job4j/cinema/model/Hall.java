@@ -65,7 +65,7 @@ public class Hall {
                 + ", name='" + name + '\''
                 + ", rowCount=" + rowCount
                 + ", placeCount=" + placeCount
-                + ", description='" + description + '\'' +
-                '}';
+                + ", description='" + description + '\''
+                + '}';
     }
 }
