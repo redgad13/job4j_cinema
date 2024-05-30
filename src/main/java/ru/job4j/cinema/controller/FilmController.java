@@ -19,6 +19,6 @@ public class FilmController {
     @GetMapping()
     public String findAll(Model model) {
         model.addAttribute("films", filmRepository.findAll());
-        return "films/list"; //возвращает html страницу
+        return "films/list";
     }
 }
