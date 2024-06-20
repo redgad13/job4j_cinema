@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 @Repository
 public class Sql2oUserRepository implements UserRepository {
     private static final Logger LOGGER = Logger.getLogger(Sql2oUserRepository.class.getName());
-    ;
+
     private final Sql2o sql2o;
 
     public Sql2oUserRepository(Sql2o sql2o) {
