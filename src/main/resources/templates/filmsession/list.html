@@ -25,6 +25,7 @@
         th {
             background-color: #f2f2f2;
         }
+
     </style>
 </head>
 <body>
@@ -43,6 +44,8 @@
         <thead>
         <tr>
             <th scope="col">Название фильма</th>
+            <th scope="col">Начало сеанса</th>
+            <th scope="col">Конец сеанса</th>
             <th scope="col">Цена</th>
         </tr>
         </thead>
@@ -52,6 +55,8 @@
                 <span th:each="film : ${films}" th:if="${fs.filmId} == ${film.id}"
                       th:text="${film.name}">Название фильма</span>
             </td>
+            <td th:text="${fs.startTime}">Начало сеанса</td>
+            <td th:text="${fs.endTime}">Конец сеанса</td>
             <td th:text="${fs.price}">Цена</td>
         </tr>
         </tbody>

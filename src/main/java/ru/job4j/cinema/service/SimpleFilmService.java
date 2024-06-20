@@ -1,5 +1,6 @@
 package ru.job4j.cinema.service;
 
+import org.springframework.stereotype.Service;
 import ru.job4j.cinema.dto.FileDto;
 import ru.job4j.cinema.model.Film;
 import ru.job4j.cinema.repository.FilmRepository;
@@ -7,6 +8,7 @@ import ru.job4j.cinema.repository.FilmRepository;
 import java.util.Collection;
 import java.util.Optional;
 
+@Service
 public class SimpleFilmService implements FilmService {
     private final FilmRepository filmRepository;
     private final FileService fileService;

@@ -9,4 +9,8 @@ public interface UserRepository {
     Collection<User> findAll();
 
     Optional<User> findById(int id);
+
+    Optional<User> findByEmailAndPassword(String email, String password);
+
+    Optional<User> save (User user);
 }
