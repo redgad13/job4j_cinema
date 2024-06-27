@@ -10,12 +10,12 @@ import ru.job4j.cinema.model.User;
 import ru.job4j.cinema.service.UserService;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/users")
 public class UserController {
     private final UserService userService;
-
 
     public UserController(UserService userService) {
         this.userService = userService;
@@ -52,5 +52,11 @@ public class UserController {
         var session = request.getSession();
         session.setAttribute("user", userOptional.get());
         return "redirect:/index";
+    }
+
+    @GetMapping("/logout")
+    public String logout(HttpSession session) {
+        session.invalidate();
+        return "redirect:/users/login";
     }
 }
