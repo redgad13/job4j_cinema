@@ -39,6 +39,7 @@ class FilmSessionControllerTest {
         var expectedFilms = List.of(film1, film2);
         var expectedSessions = List.of(filmSession1, filmSession2);
         when(filmService.findAll()).thenReturn(expectedFilms);
+        when(filmSessionService.findAll()).thenReturn(expectedSessions);
         var model = new ConcurrentModel();
         var view = filmSessionController.getFilmSession(model);
         var actualSessions = model.getAttribute("filmsession");
